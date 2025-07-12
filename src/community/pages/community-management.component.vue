@@ -225,7 +225,7 @@ export default {
 }
 
 .groups-header {
-  font-size: 1.1rem; /* Tamaño reducido */
+  font-size: 1.1rem; 
   font-weight: bold;
   color: white;
   margin-bottom: 1rem;
