@@ -77,8 +77,8 @@ export default {
         this.map = new google.maps.Map(mapDiv, {
           center: this.userLocation,
           zoom: 13,
-          disableDefaultUI: false, // 👈 Habilita todos los controles por defecto
-          streetViewControl: true, // 👈 Asegura que Street View esté activo
+          disableDefaultUI: false, //  Habilita todos los controles por defecto
+          streetViewControl: true, // Asegura que Street View esté activo
         });
 
         new google.maps.Marker({
@@ -188,10 +188,10 @@ export default {
     <div class="map-section">
       <h1>{{ $t('concert.map_title_part1') }} <span class="resaltado">{{ $t('concert.map_title_highlight') }}</span></h1>
 
-      <!-- ✅ Solo renderiza el mapa si hay lat/lng -->
+      <!-- Solo renderiza el mapa si hay lat/lng -->
       <div v-if="userLocation.lat && userLocation.lng" ref="map" class="mapa-style"></div>
 
-      <!-- ✅ Mensaje mientras se obtiene ubicación -->
+      <!--  Mensaje mientras se obtiene ubicación -->
       <div v-else style="color: white; text-align: center; padding: 2rem;">
         {{ $t('concert.locating') }}
       </div>
