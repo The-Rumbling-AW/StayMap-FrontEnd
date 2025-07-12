@@ -10,10 +10,10 @@ export default {
       required: true,
     }
   },
-  emits: ['post-deleted'], // 👈 EMITIR evento al padre
+  emits: ['post-deleted'], 
   methods: {
     removePost(deletedPostId) {
-      this.$emit('post-deleted', deletedPostId) // ✅ en vez de modificar el prop
+      this.$emit('post-deleted', deletedPostId) 
     }
   }
 
