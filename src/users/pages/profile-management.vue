@@ -21,7 +21,7 @@ export default {
       concertService: new ConcertService(),
       userService: new UserService(),
       editDialogVisible: false,
-      likedPostsData: [], // ← Aquí guardaremos los posts con like
+      likedPostsData: [], //  guardaremos los posts con like
       postService: new PostService(),
 
 
@@ -37,7 +37,6 @@ export default {
 
       this.user = storedUser;
 
-      // ✅ Cambiar this.userService.getById(...).then(...) por await
       const response = await this.userService.getById(this.user.id);
       const fetchedUser = response.data;
 
@@ -48,10 +47,10 @@ export default {
       this.user = fetchedUser;
       localStorage.setItem('user', JSON.stringify(this.user)); // actualiza storage
 
-      // ✅ Ahora sí puedes usar await sin error
+      // Ahora sí puedes usar await sin error
       await this.loadLikedPosts();  // <- esta línea daba error antes
 
-      // ✅ Luego cargar conciertos
+      // Luego cargar conciertos
       this.loadConcerts();
 
     } catch (error) {
