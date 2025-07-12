@@ -3,7 +3,7 @@ export class Concert {
                     id = 0,
                     name = '',
                     genre = '',
-                    platform = '', // ✅ Nuevo campo
+                    platform = '', 
                     date = new Date(),
                     description = '',
                     image = '',
@@ -19,7 +19,7 @@ export class Concert {
         this.id = id;
         this.name = name;
         this.genre = genre;
-        this.platform = platform; // ✅ Asignación
+        this.platform = platform; 
         this.date = new Date(date);
         this.description = description;
         this.image = image;
