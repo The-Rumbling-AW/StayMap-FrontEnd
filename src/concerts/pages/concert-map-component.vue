@@ -35,7 +35,7 @@ export default {
             (position) => {
               this.userLocation.lat = position.coords.latitude;
               this.userLocation.lng = position.coords.longitude;
-              this.fetchConcerts(); // continúa después de obtener ubicación
+              this.fetchConcerts(); 
             },
             (error) => {
               console.warn("Error al obtener ubicación:", error.message);
