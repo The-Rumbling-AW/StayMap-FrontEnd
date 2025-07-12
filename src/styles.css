@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #CB6CE6;
+    padding: 5px;
+    flex: 0 1 auto;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #b54cf4;
+}
+
+.nav-button.router-link-active {
+    color: #b54cf4;
+    font-weight: bold;
+}
+
+.custom-toolbar {
+    background-color: #000000 !important;
+    color: white !important;
+    border-bottom: 1px solid #222;
+}
+
+.logo-section .logo {
+    height: 70px;
+}
+
+/* ===================================================== */
+/* ==================== COMUNIDADES ==================== */
+/* ===================================================== */
+
+.community-card {
+    background-color: #1e1e1e;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+    width: 300px;
+    height: 400px;
+}
+.community-card:hover {
+    transform: translateY(-4px);
+}
+
+.community-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.community-card .info {
+    padding: 1rem;
+}
+
+.community-card h3 {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.community-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.community-card .join-button {
+    background-color: #b54cf4;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    font-weight: 600;
+    width: 80%;
+    margin: 1rem auto;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.communities-group-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.community-card .join-button:hover {
+    background-color: #a23be3;
+}
+
+
+/* ===================================================== */
+/* ====================== CONCIERTOS =================== */
+/* ===================================================== */
+
+.concerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.concert-card {
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+}
+
+.concert-card:hover {
+    transform: translateY(-4px);
+}
+
+.concert-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.concert-info,
+.concert-card .info {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.concert-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+    color: white;
+    margin-top: 0;
+}
+
+.concert-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* ===================================================== */
+/* ====================== FILTROS ====================== */
+/* ===================================================== */
+
+.concerts-filter-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.filter-container {
+    background-color: #110F0F;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #CB6CE6;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.filter-header {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    background-color: #110F0F;
+    border: 2px solid #CB6CE6;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #CB6CE6;
+    border-color: #CB6CE6;
+}
+
+/* ===================================================== */
+/* ==================== TUS GRUPOS ===================== */
+/* ===================================================== */
+.groups-container {
+    background-color: #110F0F;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #CB6CE6;
+    width: 280px;
+    min-width: 250px;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+.groups-header {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.groups-options {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.groups-options a:hover {
+    color: #CB6CE6;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.profile-image img {
+    height: 46px;
+    width: 55px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.nav-button {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+img.rounded-full {
+    border: 2px solid white;
+}
+
+.language-toggle {
+    display: flex;
+    border: 1px solid #cb6ce6;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 42px;
+}
+
+.language-toggle button {
+    flex: 1;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    padding: 0 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-toggle button.active {
+    background-color: #cb6ce6;
+    color: black;
+}
+
+.language-toggle button:hover {
+    cursor: pointer;
+    background-color: #b04ad4;
+}
+
+.p-dialog .p-dialog-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+input[type="file"] {
+    margin-top: 0.5rem;
+    background-color: #1a1a1a;
+    border: 1px solid #cb6ce6;
+    border-radius: 12px;
+    color: white;
+    padding: 10px;
+}
+.p-dialog .p-dialog-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.p-dialog .p-dialog-content::-webkit-scrollbar-thumb {
+    background: #cb6ce6;
+    border-radius: 10px;
+}
+.p-dropdown.p-invalid.p-focus {
+    border-color: #cb6ce6 !important;
+    box-shadow: 0 0 8px #cb6ce6 !important;
+}
+.p-dropdown {
+    border-radius: 12px !important;
+    background-color: #1a1a1a !important;
+    border: 1px solid #cb6ce6 !important;
+    color: white !important;
+    padding: 10px 12px !important;
+}
+.p-calendar .p-inputtext {
+    padding-right: 2.5rem !important;
+}
+
+.p-calendar .p-datepicker-trigger {
+    right: 0.5rem;
+    position: absolute;
+}
+
+.custom-dialog {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 25px rgba(203, 108, 230, 0.3);
+    color: white;
+    max-height: 90vh;
+    overflow-y: auto; /* <<--- Esto hace el scroll interno */
+    width: 100%;
+    position: relative;
+}
+
+/* Estilo personalizado de la barra scroll */
+.custom-dialog::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-dialog::-webkit-scrollbar-thumb {
+    background-color: #cb6ce6;
+    border-radius: 10px;
+}
+
+.custom-dialog::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3); /* antes era 0.75, muy oscuro */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
