@@ -31,7 +31,7 @@ export default {
 
       try {
         const url = await uploadToCloudinary(file)
-        this.item.image = url                        // ← guarda la URL en el modelo
+        this.item.image = url                       
       } catch (err) {
         console.error(err)
         this.uploadError = err.message
@@ -70,14 +70,6 @@ export default {
                  :class="{ invalid: submitted && !item.name }"
                  :placeholder="$t('community.name_placeholder')" />
         </div>
-
-        <!-- Miembros -->
-        <!--       <div class="field">
-               <label for="memberQuantity">{{ $t('community.members_label') }}</label>
-               <input id="memberQuantity" v-model.number="item.memberQuantity"
-                      type="number" :placeholder="$t('community.members_placeholder')" />
-             </div>-->
-
              <!-- Imagen -->
         <div class="field">
           <label for="image">{{ $t('community.image_label') }}</label>
