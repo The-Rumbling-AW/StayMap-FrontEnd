@@ -14,15 +14,15 @@ export default {
   data() {
     return {
       currentUser: null,
-      postService: new PostService(),  // 👈 inicializamos el servicio aquí
+      postService: new PostService(),  
       user: new User({}),
       userService: new UserService(),
       postedAtText: '',
       intervalId: null,
       uploading: false,
       uploadError: '',
-      isLiked: false, // 👈 ESTO ES NECESARIO
-      likeCount: 0  // 👈 contador local
+      isLiked: false,
+      likeCount: 0  
     }
   },
   created() {
@@ -35,11 +35,11 @@ export default {
 
     this.likeCount = this.post.likeCount ?? 0;
     
-    // cargar user
+
     if (this.post.userId) {
       this.userService.getById(this.post.userId).then(r => { this.user = r.data })
     }
-    // reloj
+
     this.updatePostedAtText()
     this.intervalId = setInterval(this.updatePostedAtText, 1000)
     console.log("currentUser.id:", this.currentUser?.id, "post.userId:", this.post.userId);
@@ -68,7 +68,7 @@ export default {
         if (!confirmDelete) return;
 
         await this.postService.delete(this.post.id)
-        this.$emit('post-deleted', this.post.id) // opcional si el padre debe eliminarlo del array
+        this.$emit('post-deleted', this.post.id) 
       } catch (error) {
         console.error('Error al eliminar el post:', error)
         alert('Hubo un error al eliminar el post.')
@@ -96,12 +96,12 @@ export default {
 
       try {
         if (this.isLiked) {
-          // Ya estaba likeado → eliminar like
+       
           await this.userService.removeLikeFromPost(this.currentUser.id, this.post.id);
           this.isLiked = false;
           this.likeCount = Math.max(0, this.likeCount - 1);
         } else {
-          // No estaba likeado → dar like
+        
           await this.userService.likePost(this.currentUser.id, this.post.id);
           this.isLiked = true;
           this.likeCount += 1;
@@ -122,8 +122,6 @@ export default {
         content: this.post.content,
         imageUrl: this.post.imageUrl
       })
-
-      // Limpiar los campos después de enviar
       this.post.content = ''
       this.post.imageUrl = ''
     },
